@@ -10,6 +10,12 @@ module.exports = {
       legacyDecorators: true,
     },
   },
+  'prettier/prettier': [
+    'error',
+    {
+      endOfLine: 'auto',
+    },
+  ],
   plugins: ['ember'],
   extends: [
     'eslint:recommended',

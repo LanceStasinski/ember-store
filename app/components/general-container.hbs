@@ -1,10 +1,12 @@
 <LinkTo @route='cart' class='cart-link'>
   <i class='bi bi-cart3'></i>
-  {{#if this.cart.itemList.length}}
+  {{#if (cart-display this.cart.itemList this.itemCount)}}
+    
+  
     <span
       class='cart-count d-inline-flex justify-content-center align-items-center'
     >
-      {{this.cart.itemList.length}}
+      {{this.itemCount}}
     </span>
   {{/if}}
 

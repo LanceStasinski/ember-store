@@ -18,6 +18,16 @@
         <h4>{{item.name}}</h4>
         <i class='font-weight-bold'>{{currency item.price}}</i>
       </div>
+      <label for={{concat 'item-input' item.name}} class='d-none'>number of
+        items</label>
+      <input
+        name={{concat 'item-input' item.name}}
+        id={{concat 'item-input' item.name}}
+        type='number'
+        class='ml-auto'
+        value={{item.count}}
+        {{on "input" (fn this.updateItemCount item)}}
+      />
     </div>
   {{/each}}
 

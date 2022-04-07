@@ -13,8 +13,12 @@
 
   {{!Price}}
   <section class={{unless @isDetails 'h4'}}>
-    <del data-test-original-price class='small text-black-50'>{{currency @price.original}}</del>
-    <i data-test-current-price class='text-danger font-weight-bold'>{{currency @price.current}}</i>
+    <del data-test-original-price class='small text-black-50'>{{currency
+        @price.original
+      }}</del>
+    <i data-test-current-price class='text-danger font-weight-bold'>{{currency
+        @price.current
+      }}</i>
   </section>
 
   {{#if @isDetails}}
@@ -34,8 +38,13 @@
           {{/each}}
         </div>
       </div>
-      <button class='btn btn-info' type='button' {{on 'click' this.addToCart}}>
-        <i class="bi bi-cart-plus-fill"></i>
+      <button
+        data-test-add-to-cart
+        class='btn btn-info'
+        type='button'
+        {{on 'click' this.addToCart}}
+      >
+        <i class='bi bi-cart-plus-fill'></i>
         Add To Cart
       </button>
     </div>
